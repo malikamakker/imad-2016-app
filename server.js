@@ -14,6 +14,12 @@ app.get('/article-one',function(req,res){
     
 });
 
+var counter;
+app.get('\counter',function(req,res){
+    counter=counter+1;
+    req.send(counter.toString());
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
